@@ -1,0 +1,82 @@
+
+<div ng-cloak>
+  <md-content>
+    <md-tabs class="md-primary" md-dynamic-height md-border-bottom md-center-tabs>
+      <md-tab label="Graph"> 
+        <md-content class="md-padding">
+          <h3 class="md-title">Graph</h3>
+          <p class="md-body-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+
+
+
+
+
+
+                <div ng-controller="GraphCtrl" class="md-padding" ng-cloak>
+                  <div id="chart_div"></div>
+                  
+                  <md-input-container flex="50">
+          <p class="md-caption">Select Format</p>
+          
+          <md-select name="type" ng-model="format" ng-change="changeFormat()">
+            
+            <md-option value="Week" ng-selected="true">Week</md-option>
+            <md-option value="Month">Month</md-option>
+          </md-select>
+        </md-input-container>
+        
+        
+
+                  <div id="linechart_material"></div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+        </md-content>
+      </md-tab>
+
+      <md-tab label="Pending">
+        <md-content ng-controller="PendingCtrl" class="md-padding">
+      
+         
+          <h2> Pending</h2>
+ <p class="md-subhead"> "<"Pending-events-Directive">" You haven't rated these events yet </p>
+
+           <md-list class="md-dense md-border-bottom" flex>
+          <md-subheader class="md-no-sticky">Unrated Events</md-subheader>
+
+
+          <md-list-item  md-whiteframe="3" class="md-3-line repeated-item" ng-click="showPrompt($event,pevent)" ng-repeat="pevent in pevents">
+          <div class="md-list-item-text" layout="column">
+            <h3>{{pevent.eventname}}</h3>
+             <div class="pull-right"><p>{{pevent.eventdate}}</p></div>
+            <h4>{{pevent.eventdescription}}</h4>
+           
+          </div>
+
+          </md-list-item>
+          </md-list>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Upcomming" flex> 
+        <md-content class="md-padding">
+          <h2> List of Upcoming events</h2>
+
+
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+        </md-content>
+      </md-tab>
+      
+    </md-tabs>
+  </md-content>
+</div>

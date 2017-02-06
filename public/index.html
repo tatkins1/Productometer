@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Nunito:400,400i|Sansita:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <link href="css/screen.css" rel="stylesheet">
+<script src="https://apis.google.com/js/api.js"></script>
+
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>   <!-- Google Charts -->
+
+
+</head>
+	<body ng-cloak>
+		<div id="screen1"> 
+		<div ng-controller="AppCtrl" layout="column" ng-cloak>
+			
+		<md-toolbar md-scroll-shrink id="header" class="md-primary">
+			
+			      <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+			         <div flex-offset="10" ><h1>ProductoMeter</h1></div>
+			        <div ng-show="isAuth1" ><md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+			          <i class="material-icons">menu</i>
+			        </md-button></div>   
+			      </div>
+			    </md-toolbar><!--Headertoolbar-->
+		
+		<md-sidenav
+				        class="md-sidenav-left"
+				        md-component-id="left"
+				        md-whiteframe="4">
+
+				      
+			     	 <md-content layout-padding ng-controller="LeftCtrl">
+						<md-list flex>
+					    	<md-list-item class="md-3-line" ng-click="goProfile()">
+						          <img ng-src="img/profpic.png" class="md-avatar" alt="blahfa" />
+						          <div class="md-list-item-text" layout="column">
+						            <h3>{{$parent.username}}</h3>
+						            <h4>Calendat</h4>
+						            <p>Class</p>
+						          </div>
+						        </md-list-item>
+						       
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goHome()">
+					        <p> Home</p>
+					          <img src="https://maxcdn.icons8.com/office/PNG/40/Business/line_chart-40.png" title="Line Chart" width="24">
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					       
+					        <md-list-item ng-click="goAchievments()">
+					          <p>Achievments</p>
+					          <img src="https://maxcdn.icons8.com/Color/PNG/48/Sports/trophy-48.png" title="Trophy" width="24">
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					         <md-list-item ng-click="goEvent()">
+					          <p> Event Log</p>
+					         <img src="https://maxcdn.icons8.com/Color/PNG/48/Business/todo_list-48.png" title="Todo List" width="24">
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					         <md-list-item ng-click="goAbout()">
+					          <p> About</p>
+					        <img src="https://maxcdn.icons8.com/Color/PNG/48/Very_Basic/about-48.png" title="About" width="24">
+					        </md-list-item>  
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goSettings()">
+					          <p> Settings</p>
+					         <img src="https://maxcdn.icons8.com/Color/PNG/48/Very_Basic/settings-48.png" title="Settings" width="24">
+					        </md-list-item>  
+					        <md-divider ></md-divider>
+					         <md-list-item ng-click="showConfirm($event)">
+					          <p> Logout</p>
+					          <img src="https://maxcdn.icons8.com/Android_L/PNG/48/User_Interface/exit-48.png" title="Exit" width="24">
+					        </md-list-item>
+					       <md-divider ></md-divider>
+
+
+					      </md-list>
+					  </md-content>
+
+			    	</md-sidenav><!--sidenav-->
+			  
+				
+  				
+			  	<div ng-view></div>
+			  	
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 </div>
+			
+
+		</div>
+		
+
+
+     
+
+      
+<!--Made by Tahj-->
+    
+		
+
+
+		<!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+
+
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="js/app.js">      </script>
+    <script type="text/javascript" src="js/controllers.js"> /</script>
+
+	</body>
+</html>
