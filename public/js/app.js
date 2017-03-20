@@ -1,13 +1,8 @@
  
    // Initialize Firebase
    var config = {
-    apiKey: "______________",
-    authDomain: "productometer.firebaseapp.com",
-    databaseURL: "https://productometer.firebaseio.com",
-    storageBucket: "___________",
-    messagingSenderId: "_____________"
+   
   };
-  //look in firebase console for values for ____________
   firebase.initializeApp(config);
 
 var app = angular.module('myApp', ['ngMaterial', 'ngRoute', 'ngAnimate', 'firebase']);

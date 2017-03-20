@@ -44,7 +44,7 @@
       </md-tab>
 
       <md-tab label="Pending">
-        <md-content ng-controller="PendingCtrl" class="md-padding">
+        <md-content class="md-padding">
       
          
           <h2> Pending</h2>
@@ -54,11 +54,11 @@
           <md-subheader class="md-no-sticky">Unrated Events</md-subheader>
 
 
-          <md-list-item  md-whiteframe="3" class="md-3-line repeated-item" ng-click="showPrompt($event,pevent)" ng-repeat="pevent in pevents">
+          <md-list-item  md-whiteframe="3" class="md-3-line repeated-item" ng-click="showPrompt($event,pevent)" ng-repeat="pevent in val1">
           <div class="md-list-item-text" layout="column">
-            <h3>{{pevent.eventname}}</h3>
-             <div class="pull-right"><p>{{pevent.eventdate}}</p></div>
-            <h4>{{pevent.eventdescription}}</h4>
+            <h3>{{pevent.summary}}</h3>
+             <div class="pull-right"><p>{{pevent.start.dateTime}}</p></div>
+            <h4>{{pevent.description}}</h4>
            
           </div>
 
@@ -69,11 +69,26 @@
       </md-tab>
       <md-tab label="Upcomming" flex> 
         <md-content class="md-padding">
+        
           <h2> List of Upcoming events</h2>
 
+           <md-list class="md-dense md-border-bottom" flex>
 
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+          <md-list-item  md-whiteframe="3" class="md-3-line repeated-item" ng-click="null" ng-repeat="result in resultz">
+          <div class="md-list-item-text" layout="column">
+            <h3>{{result.summary}}</h3>
+             <div class="pull-right"><p>{{result.start.dateTime}}</p></div>
+            <h4>{{result.description}}</h4>
+           
+          </div>
+
+          </md-list-item>
+          </md-list>
+
+
+
+          
         </md-content>
       </md-tab>
       
